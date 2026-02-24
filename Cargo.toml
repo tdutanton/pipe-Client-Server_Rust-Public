@@ -1,0 +1,18 @@
+[package]
+name = "pipe-client-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.59", features = ["derive"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+nix = { version = "0.27", features = ["fs"] }
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
